@@ -144,20 +144,11 @@ fn add_background_graph(graph: &mut RenderGraph, msaa: &Msaa) {
         .add_node_edge(BACKGROUND_PASS, base::node::MAIN_PASS)
         .unwrap();
 
-    /* Pull in other needs we need to draw a SpriteBundle (?) */
+    /* Pull in other nodes needs we need to draw a SpriteBundle (?) */
     graph.add_node_edge("transform", BACKGROUND_PASS).unwrap();
     graph.add_node_edge("sprite", BACKGROUND_PASS).unwrap();
     graph
         .add_node_edge("color_material", BACKGROUND_PASS)
-        .unwrap();
-    graph
-        .add_node_edge("shared_buffers", BACKGROUND_PASS)
-        .unwrap();
-    graph
-        .add_node_edge("texture_copy", BACKGROUND_PASS)
-        .unwrap();
-    graph
-        .add_node_edge("standard_material", BACKGROUND_PASS)
         .unwrap();
 
     /* Add a system Node for our camera and connect it to the Background Pass */
