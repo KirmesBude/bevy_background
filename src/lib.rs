@@ -52,6 +52,10 @@ fn setup(
     commands
         .spawn_bundle(SpriteBundle {
             material: background.0.clone(),
+            sprite: Sprite {
+                size: Vec2::new(200.0, 200.0),
+                ..Default::default()
+            },
             ..Default::default()
         })
         .insert(BackgroundPass)

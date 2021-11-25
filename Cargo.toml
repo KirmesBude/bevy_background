@@ -7,3 +7,14 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.5"
+
+[dev-dependencies]
+bevy_mod_debugdump = "0.2"
+
+[[example]]
+name = "spec"
+path = "examples/spec.rs"
+
+[[example]]
+name = "dump_graph"
+path = "examples/dump_graph.rs"

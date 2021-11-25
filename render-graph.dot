@@ -1,0 +1,40 @@
+digraph RenderGraph {
+	"rankdir"="LR";
+	"ranksep"="1.0";
+	graph ["bgcolor"="white"];
+	edge ["fontname"="Helvetica", "fontcolor"="black"];
+	node ["shape"="plaintext", "fontname"="Helvetica", "fontcolor"="black"];
+	318211530612159116160194957787702261289 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">lights<BR/><FONT COLOR="red" POINT-SIZE="10">LightsNode</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	324720541975133796956551017756627244051 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">camera_2d<BR/><FONT COLOR="red" POINT-SIZE="10">CameraNode</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	266124938544068335225978975675593015871 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">camera_3d<BR/><FONT COLOR="red" POINT-SIZE="10">CameraNode</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	334423677306482517857230485149127012404 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">camera_ui<BR/><FONT COLOR="red" POINT-SIZE="10">CameraNode</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	57105580119973040525778116925267736298 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">main_pass<BR/><FONT COLOR="red" POINT-SIZE="10">PassNode&lt;MainPass&gt;</FONT></TD></TR><TR><TD PORT="0">color_attachment: Texture</TD><TD BORDER="0">&nbsp;</TD></TR><TR><TD PORT="1">depth: Texture</TD><TD BORDER="0">&nbsp;</TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	241027434831098854838734998644110564080 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">ui_pass<BR/><FONT COLOR="red" POINT-SIZE="10">PassNode&lt;Node&gt;</FONT></TD></TR><TR><TD PORT="0">color_attachment: Texture</TD><TD BORDER="0">&nbsp;</TD></TR><TR><TD PORT="1">depth: Texture</TD><TD BORDER="0">&nbsp;</TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	203644963561196210795210768539878210460 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">standard_material<BR/><FONT COLOR="red" POINT-SIZE="10">AssetRenderResourcesNode&lt;StandardMaterial&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	194525804420836846966371611273537492670 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">color_material<BR/><FONT COLOR="red" POINT-SIZE="10">AssetRenderResourcesNode&lt;ColorMaterial&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	137726160155291310134607671051363859499 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">sprite_sheet<BR/><FONT COLOR="red" POINT-SIZE="10">AssetRenderResourcesNode&lt;TextureAtlas&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	71309535057701657597315141534160767558 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">sprite<BR/><FONT COLOR="red" POINT-SIZE="10">RenderResourcesNode&lt;Sprite&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	99016335666779983268604134498999525661 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">sprite_sheet_sprite<BR/><FONT COLOR="red" POINT-SIZE="10">RenderResourcesNode&lt;TextureAtlasSprite&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	161778927135503308013691167219162158854 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">transform<BR/><FONT COLOR="red" POINT-SIZE="10">RenderResourcesNode&lt;GlobalTransform&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	62957815438073722050189875165601098120 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">node<BR/><FONT COLOR="red" POINT-SIZE="10">RenderResourcesNode&lt;Node&gt;</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	16267536308242080321306511655201296340 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">shared_buffers<BR/><FONT COLOR="red" POINT-SIZE="10">SharedBuffersNode</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	301514018268909397378154474349306190761 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">texture_copy<BR/><FONT COLOR="red" POINT-SIZE="10">TextureCopyNode</FONT></TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	222273742520734722468228767713518051921 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">swapchain<BR/><FONT COLOR="red" POINT-SIZE="10">WindowSwapChainNode</FONT></TD></TR><TR><TD BORDER="0">&nbsp;</TD><TD PORT="0">texture: Texture</TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	47897317306794798010371829693162986956 ["label"=<<TABLE STYLE="rounded"><TR><TD PORT="title" BORDER="0" COLSPAN="2">main_pass_depth_texture<BR/><FONT COLOR="red" POINT-SIZE="10">WindowTextureNode</FONT></TD></TR><TR><TD BORDER="0">&nbsp;</TD><TD PORT="0">texture: Texture</TD></TR></TABLE>>, "color"="black", "fillcolor"="black"]
+	222273742520734722468228767713518051921:0:e -> 241027434831098854838734998644110564080:0:w ["color"="blue"]
+	47897317306794798010371829693162986956:0:e -> 241027434831098854838734998644110564080:1:w ["color"="blue"]
+	57105580119973040525778116925267736298:title:e -> 241027434831098854838734998644110564080:title:w ["color"="black"]
+	334423677306482517857230485149127012404:title:e -> 241027434831098854838734998644110564080:title:w ["color"="black"]
+	62957815438073722050189875165601098120:title:e -> 241027434831098854838734998644110564080:title:w ["color"="black"]
+	301514018268909397378154474349306190761:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	16267536308242080321306511655201296340:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	266124938544068335225978975675593015871:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	324720541975133796956551017756627244051:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	222273742520734722468228767713518051921:0:e -> 57105580119973040525778116925267736298:0:w ["color"="blue"]
+	47897317306794798010371829693162986956:0:e -> 57105580119973040525778116925267736298:1:w ["color"="blue"]
+	194525804420836846966371611273537492670:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	71309535057701657597315141534160767558:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	203644963561196210795210768539878210460:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	161778927135503308013691167219162158854:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+	318211530612159116160194957787702261289:title:e -> 57105580119973040525778116925267736298:title:w ["color"="black"]
+}
